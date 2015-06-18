@@ -25,7 +25,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	sum = a + b;
 	difference = a - b;
 	product = a * b;
-	dividend = a / b;
+	
 	if (sign == 1) {
 		cout << "The answer is " << sum << endl;
 	}
@@ -35,7 +35,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	else if (sign == 3) {
 		cout << "The answer is " << product << endl;
 	}
-	else {
+	else if (sign == 4) {
+		dividend = a / b;
 		cout << "The answer is " << dividend << endl;
 	}
 	cout << "Press a key and then press Enter to exit" << endl;
