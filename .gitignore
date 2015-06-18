@@ -1,28 +1,44 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+/* 
+Do not divide by 0!
+*/
 
-# Precompiled Headers
-*.gch
-*.pch
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int a;
+	int b;
+	int c;
+	int sign;
+	int sum;
+	int difference;
+	int product;
+	int dividend;
+	cout << "add, subtract, multiply, or divide? To add, press 1. To subtract, press 2. To multiply, press 3. To divide, press 4." << endl;
+	cin >> sign;
+	cout << "Enter a number now" << endl;
+	cin >> a;
+	cout << "Enter the second number" << endl;
+	cin >> b;
+	sum = a + b;
+	difference = a - b;
+	product = a * b;
+	dividend = a / b;
+	if (sign == 1) {
+		cout << "The answer is " << sum << endl;
+	}
+	else if (sign == 2) {
+		cout << "The answer is " << difference << endl;
+	}
+	else if (sign == 3) {
+		cout << "The answer is " << product << endl;
+	}
+	else {
+		cout << "The answer is " << dividend << endl;
+	}
+	cout << "Press a key and then press Enter to exit" << endl;
+	cin >> c;
+	return 0;
+}
