@@ -1,5 +1,7 @@
-/* 
-Do not divide by 0!
+// calculator.cpp : Defines the entry point for the console application.
+//
+/*
+This is a text-based calculator that can add, subtract, multiply, or divide.
 */
 
 #include "stdafx.h"
@@ -36,8 +38,13 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << "The answer is " << product << endl;
 	}
 	else if (sign == 4) {
+		if (b == 0) {
+			cout << "Error" << endl;
+		}
+		else {
 		dividend = a / b;
 		cout << "The answer is " << dividend << endl;
+		}
 	}
 	cout << "Press a key and then press Enter to exit" << endl;
 	cin >> c;
